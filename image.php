@@ -33,7 +33,7 @@ get_header();
 
 							edit_post_link( __( 'Edit', 'boiler' ), '<span class="sep"> | </span> <span class="edit-link">', '</span>' );
 						?>
-					</div><!-- .entry-meta -->
+					</div>
 
 					<nav role="navigation" id="image-navigation" class="navigation-image">
 						<div class="nav-previous"><?php previous_image_link( false, __( '<span class="meta-nav">&larr;</span> Previous', 'boiler' ) ); ?></div>
@@ -45,14 +45,14 @@ get_header();
 					<div class="entry-attachment">
 						<div class="attachment">
 							<?php boiler_the_attached_image(); ?>
-						</div><!-- .attachment -->
+						</div>
 
 						<?php if ( has_excerpt() ) : ?>
 						<div class="entry-caption">
 							<?php the_excerpt(); ?>
-						</div><!-- .entry-caption -->
+						</div>
 						<?php endif; ?>
-					</div><!-- .entry-attachment -->
+					</div>
 
 					<?php
 						the_content();
@@ -77,8 +77,8 @@ get_header();
 
 						edit_post_link( __( 'Edit', 'boiler' ), ' <span class="edit-link">', '</span>' );
 					?>
-				</footer><!-- .entry-meta -->
-			</article><!-- #post-## -->
+				</footer>
+			</article>
 
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template
@@ -88,7 +88,7 @@ get_header();
 
 		<?php endwhile; // end of the loop. ?>
 
-		</div><!-- #content -->
-	</div><!-- #primary -->
+		</div>
+	</div>
 
 <?php get_footer(); ?>

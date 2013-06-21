@@ -13,7 +13,7 @@ get_header(); ?>
 			<article id="post-0" class="post not-found">
 				<header class="entry-header">
 					<h1 class="entry-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'boiler' ); ?></h1>
-				</header><!-- .entry-header -->
+				</header>
 
 				<div class="entry-content">
 					<p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'boiler' ); ?></p>
@@ -36,7 +36,7 @@ get_header(); ?>
 							) );
 						?>
 						</ul>
-					</div><!-- .widget -->
+					</div>
 					<?php endif; ?>
 
 					<?php
@@ -47,10 +47,10 @@ get_header(); ?>
 
 					<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
 
-				</div><!-- .entry-content -->
-			</article><!-- #post-0 .post .not-found -->
+				</div>
+			</article>
 
-		</div><!-- #content -->
-	</div><!-- #primary -->
+		</div>
+	</div>
 
 <?php get_footer(); ?>

@@ -10,8 +10,8 @@
 
 		<div class="entry-meta">
 			<?php boiler_posted_on(); ?>
-		</div><!-- .entry-meta -->
-	</header><!-- .entry-header -->
+		</div>
+	</header>
 
 	<div class="entry-content">
 		<?php the_content(); ?>
@@ -21,7 +21,7 @@
 				'after'  => '</div>',
 			) );
 		?>
-	</div><!-- .entry-content -->
+	</div>
 
 	<footer class="entry-meta">
 		<?php
@@ -59,5 +59,5 @@
 		?>
 
 		<?php edit_post_link( __( 'Edit', 'boiler' ), '<span class="edit-link">', '</span>' ); ?>
-	</footer><!-- .entry-meta -->
-</article><!-- #post-## -->
+	</footer>
+</article>

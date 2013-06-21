@@ -49,14 +49,14 @@ if ( post_password_required() )
 				 */
 				wp_list_comments( array( 'callback' => 'boiler_comment' ) );
 			?>
-		</ol><!-- .comment-list -->
+		</ol>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-below" class="navigation-comment" role="navigation">
 			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'boiler' ); ?></h1>
 			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'boiler' ) ); ?></div>
 			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'boiler' ) ); ?></div>
-		</nav><!-- #comment-nav-below -->
+		</nav>
 		<?php endif; // check for comment navigation ?>
 
 	<?php endif; // have_comments() ?>
@@ -70,4 +70,4 @@ if ( post_password_required() )
 
 	<?php comment_form(); ?>
 
-</div><!-- #comments -->
+</div>

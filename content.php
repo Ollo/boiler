@@ -9,16 +9,16 @@
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php boiler_posted_on(); ?>
-		</div><!-- .entry-meta -->
+			<div class="entry-meta">
+				<?php boiler_posted_on(); ?>
+			</div>
 		<?php endif; ?>
-	</header><!-- .entry-header -->
+	</header>
 
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
+		<div class="entry-summary">
+			<?php the_excerpt(); ?>
+		</div>
 	<?php else : ?>
 	<div class="entry-content">
 		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'boiler' ) ); ?>
@@ -28,7 +28,7 @@
 				'after'  => '</div>',
 			) );
 		?>
-	</div><!-- .entry-content -->
+	</div>
 	<?php endif; ?>
 
 	<footer class="entry-meta">
@@ -61,5 +61,5 @@
 		<?php endif; ?>
 
 		<?php edit_post_link( __( 'Edit', 'boiler' ), '<span class="sep"> | </span><span class="edit-link">', '</span>' ); ?>
-	</footer><!-- .entry-meta -->
-</article><!-- #post-## -->
+	</footer>
+</article>

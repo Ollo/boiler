@@ -17,8 +17,7 @@ get_header(); ?>
 		<div id="content" class="site-content" role="main">
 
 		<?php if ( have_posts() ) : ?>
-
-			<?php /* Start the Loop */ ?>
+		
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
@@ -39,8 +38,8 @@ get_header(); ?>
 
 		<?php endif; ?>
 
-		</div><!-- #content -->
-	</div><!-- #primary -->
+		</div>
+	</div>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

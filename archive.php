@@ -82,7 +82,7 @@ get_header(); ?>
 
 					endif;
 				?>
-			</header><!-- .page-header -->
+			</header>
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -105,8 +105,8 @@ get_header(); ?>
 
 		<?php endif; ?>
 
-		</div><!-- #content -->
-	</section><!-- #primary -->
+		</div>
+	</section>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
