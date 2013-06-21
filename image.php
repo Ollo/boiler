@@ -7,15 +7,12 @@
 
 get_header();
 ?>
-
-	<div id="primary" class="content-area image-attachment">
-		<div id="content" class="site-content" role="main">
-
+	<section>
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<header class="entry-header">
-					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			<article>
+				<header>
+					<?php the_title( '<h1>', '</h1>' ); ?>
 
 					<div class="entry-meta">
 						<?php
@@ -38,14 +35,14 @@ get_header();
 					<nav role="navigation" id="image-navigation" class="navigation-image">
 						<div class="nav-previous"><?php previous_image_link( false, __( '<span class="meta-nav">&larr;</span> Previous', 'boiler' ) ); ?></div>
 						<div class="nav-next"><?php next_image_link( false, __( 'Next <span class="meta-nav">&rarr;</span>', 'boiler' ) ); ?></div>
-					</nav><!-- #image-navigation -->
-				</header><!-- .entry-header -->
+					</nav>
+				</header>
 
-				<div class="entry-content">
-					<div class="entry-attachment">
-						<div class="attachment">
+				<div>
+					<div>
+						<figure>
 							<?php boiler_the_attached_image(); ?>
-						</div>
+						</figure>
 
 						<?php if ( has_excerpt() ) : ?>
 						<div class="entry-caption">
@@ -61,9 +58,9 @@ get_header();
 							'after'  => '</div>',
 						) );
 					?>
-				</div><!-- .entry-content -->
+				</div>
 
-				<footer class="entry-meta">
+				<footer>
 					<?php
 						if ( comments_open() && pings_open() ) : // Comments and trackbacks open
 							printf( __( '<a class="comment-link" href="#respond" title="Post a comment">Post a comment</a> or leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'boiler' ), get_trackback_url() );
@@ -87,8 +84,5 @@ get_header();
 			?>
 
 		<?php endwhile; // end of the loop. ?>
-
-		</div>
-	</div>
-
+	</section>
 <?php get_footer(); ?>

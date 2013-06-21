@@ -4,16 +4,16 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
+<article>
+	<header>
+		<h1><?php the_title(); ?></h1>
 
 		<div class="entry-meta">
 			<?php boiler_posted_on(); ?>
 		</div>
 	</header>
 
-	<div class="entry-content">
+	<div>
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
@@ -23,7 +23,7 @@
 		?>
 	</div>
 
-	<footer class="entry-meta">
+	<footer>
 		<?php
 			/* translators: used between list items, there is a space after the comma */
 			$category_list = get_the_category_list( __( ', ', 'boiler' ) );

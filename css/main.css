@@ -64,7 +64,7 @@ mark { background: #ff0; color: #000; }
 p, pre { margin: 1em 0; }
 
 /* line 229, ../sass/libs/_normalize.scss */
-code, kbd, pre, samp { font-family: monospace, serif; _font-family: "courier new", monospace; font-size: 1em; }
+code, kbd, pre, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
 
 /* line 239, ../sass/libs/_normalize.scss */
 pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
@@ -115,7 +115,7 @@ figure { margin: 0; }
 form { margin: 0; }
 
 /* line 377, ../sass/libs/_normalize.scss */
-fieldset { border: 1px solid silver; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
 
 /* line 388, ../sass/libs/_normalize.scss */
 legend { border: 0; padding: 0; white-space: normal; *margin-left: -7px; }

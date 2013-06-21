@@ -7,13 +7,12 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+	<section>
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'boiler' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+			<header>
+				<h1><?php printf( __( 'Search Results for: %s', 'boiler' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 			</header>
 
 			<?php /* Start the Loop */ ?>
@@ -30,8 +29,7 @@ get_header(); ?>
 			<?php get_template_part( 'no-results', 'search' ); ?>
 
 		<?php endif; ?>
-
-		</div>
+		
 	</section>
 
 <?php get_sidebar(); ?>

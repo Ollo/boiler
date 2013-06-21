@@ -13,9 +13,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
-
+	<section>	
 		<?php if ( have_posts() ) : ?>
 		
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -37,9 +35,7 @@ get_header(); ?>
 			<?php get_template_part( 'no-results', 'index' ); ?>
 
 		<?php endif; ?>
-
-		</div>
-	</div>
+	</section>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

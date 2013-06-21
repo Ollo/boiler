@@ -5,7 +5,7 @@
  * @package boiler
  */
 ?>
-	<div id="secondary" class="widget-area" role="complementary">
+	<article class="sidebar">	
 		<?php do_action( 'before_sidebar' ); ?>
 		<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 
@@ -19,15 +19,7 @@
 					<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
 				</ul>
 			</aside>
-
-			<aside id="meta" class="widget">
-				<h1 class="widget-title"><?php _e( 'Meta', 'boiler' ); ?></h1>
-				<ul>
-					<?php wp_register(); ?>
-					<li><?php wp_loginout(); ?></li>
-					<?php wp_meta(); ?>
-				</ul>
-			</aside>
+	</article>
 
 		<?php endif; // end sidebar widget area ?>
-	</div>
+	
