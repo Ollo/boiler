@@ -68,3 +68,34 @@ function boiler_wp_title( $title, $sep ) {
 	return $title;
 }
 add_filter( 'wp_title', 'boiler_wp_title', 10, 2 );
+
+/**
+ * Custom excerpt link 
+ * use print_excerpt(int)
+ * uses content instead of excerpt field so be be preparred to filter html out 
+ */
+
+function print_excerpt($length) {
+	global $post;
+	$text = $post->post_excerpt;
+	if ( '' == $text ) {
+		$text = get_the_content('');
+		$text = apply_filters('the_content', $text);
+		$text = str_replace(']]>', ']]>', $text);
+	}
+	$text = strip_shortcodes($text);
+	$text = strip_tags($text,'<p><a>');
+	//$text = strip_tags($text); // use ' $text = strip_tags($text,'<p><a>'); ' if you want to keep some tags
+
+	$text = substr($text,0,$length);
+	$excerpt = reverse_strrchr($text, '.', 1);
+	if( $excerpt ) {
+		echo apply_filters('the_excerpt',$excerpt);
+	} else {
+		echo apply_filters('the_excerpt',$text);
+	}
+}
+
+function reverse_strrchr($haystack, $needle, $trail) {
+    return strrpos($haystack, $needle) ? substr($haystack, 0, strrpos($haystack, $needle) + $trail) : false;
+}
