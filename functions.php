@@ -60,16 +60,24 @@ remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
 // WP version
 remove_action( 'wp_head', 'wp_generator' );
 
+// remove pesky injected css for recent comments widget
+add_filter( 'wp_head', 'boiler_remove_wp_widget_recent_comments_style', 1 );
+// clean up comment styles in the head
+add_action('wp_head', 'boiler_remove_recent_comments_style', 1);
+// clean up gallery output in wp
+add_filter('gallery_style', 'boiler_gallery_style');
+
+
 
 // remove injected CSS for recent comments widget
-function bones_remove_wp_widget_recent_comments_style() {
+function boiler_remove_wp_widget_recent_comments_style() {
    if ( has_filter('wp_head', 'wp_widget_recent_comments_style') ) {
       remove_filter('wp_head', 'wp_widget_recent_comments_style' );
    }
 }
 
 // remove injected CSS from recent comments widget
-function bones_remove_recent_comments_style() {
+function boiler_remove_recent_comments_style() {
   global $wp_widget_factory;
   if (isset($wp_widget_factory->widgets['WP_Widget_Recent_Comments'])) {
     remove_action('wp_head', array($wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style'));
@@ -77,7 +85,7 @@ function bones_remove_recent_comments_style() {
 }
 
 // remove injected CSS from gallery
-function bones_gallery_style($css) {
+function boiler_gallery_style($css) {
   return preg_replace("!<style type='text/css'>(.*?)</style>!s", '', $css);
 }
 
