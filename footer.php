@@ -7,7 +7,9 @@
 ?>
 
 	<footer>
-		
+		<div class="site-info">
+			<?php echo get_theme_mod( 'site-info' ); ?>
+		</div>
 	</footer>
 </div>
 
