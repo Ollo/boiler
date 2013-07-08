@@ -131,7 +131,9 @@ function boiler_scripts_styles() {
 	// style.css just initializes the theme. This is compiled from /sass
 	wp_enqueue_style( 'main-style', get_template_directory_uri() . '/css/main.css');
 
-	wp_enqueue_script ('jquery' , array(), '', true);
+	wp_enqueue_script( 'jquery' , array(), '', true );
+
+	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendor/modernizr-2.6.2.min.js', '2.6.2', true );
 
 	wp_enqueue_script( 'boiler-plugins', get_template_directory_uri() . '/js/plugins.js', array(), '20120206', true );
 
