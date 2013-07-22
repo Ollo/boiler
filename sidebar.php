@@ -19,7 +19,6 @@
 					<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
 				</ul>
 			</aside>
-	</article>
 
 		<?php endif; // end sidebar widget area ?>
-	
+	</article>
