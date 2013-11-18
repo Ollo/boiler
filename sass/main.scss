@@ -6,6 +6,7 @@
 
 // sass libraries 
 @import "libs/normalize"; 
+@import "libs/fontawesome/font-awesome";
 // @import "libs/animate"; //big lib add if needed
 
 
@@ -13,11 +14,11 @@
 @import "partials/grid";  // for grid params
 @import "partials/mixins"; // for custom mixins
 @import "partials/font";  // type set up { @font-face }
+@import "partials/colors"; 
+@import "partials/layout";
+@import "partials/base"; // basic defaults 
 
 // site elements
 @import "elements/header";
 @import "elements/sidebar";
 @import "elements/footer";
-
-// main styles 
-@import "partials/app";

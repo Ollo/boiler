@@ -27,13 +27,13 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->
     
-<div class="wrapper">
-	<?php do_action( 'before' ); ?>
-	<header>
-		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-		<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-	</header>
-		<nav id="site-navigation" class="navigation-main" role="navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav>
 
+<header class="site_header">
+	<div class="wrapper">
+		<h1 class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		<nav class="header_nav" role="navigation">
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => 'false' ) ); ?>
+		</nav>
+	</div>
+</header>
+	<div class="container">

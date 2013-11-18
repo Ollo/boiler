@@ -1,2 +1,21 @@
+// footer styles
 
-footer {}
+.site_footer {
+	background: $gray;
+
+	.copy {
+		color: $white;
+		-webkit-font-smoothing: antialiased;
+		@include span-columns(6);
+	}
+	.social {
+		@include span-columns(6);
+		@include clearfix;
+		text-align: right;
+
+		li {
+			display: inline-block;
+			margin-right: 0.75em;
+		}
+	}
+}
