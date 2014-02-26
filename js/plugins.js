@@ -28,8 +28,8 @@ var loadReload = function() {
         lr.type = "text/javascript";
         lr.src = "//localhost:35729/livereload.js";
 
-    if ($('#globalFooter')) {
-        $('#globalFooter').append(lr);
+    if (jQuery('#globalFooter')) {
+        jQuery('#globalFooter').append(lr);
         console.log('livereload is locked and loaded!!');
     }
 }

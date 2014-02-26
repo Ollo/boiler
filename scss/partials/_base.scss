@@ -19,7 +19,7 @@ a {
 	text-decoration: none;
 	@include transition(color 2s ease-in);
 	color: $orange;
-	
+
 	&:hover {
 		color: darken($orange, 5%);
 	}

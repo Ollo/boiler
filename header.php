@@ -26,7 +26,7 @@
 	<!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->
-    
+
     <div class="container">
 		<header id="globalHeader">
 			<h1 id="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -34,4 +34,3 @@
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => 'false' ) ); ?>
 			</nav>
 		</header>
-		<main class="content">

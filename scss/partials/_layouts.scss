@@ -2,4 +2,14 @@
 // general wrapper class
 .container {
 	@include outer-container;
+
+	.content {
+		@include span-columns(8);
+		padding: 2rem 0;
+	}
+	.sidebar {
+		@include span-columns(4);
+		@include omega;
+		padding: 2rem 0;
+	}
 }
