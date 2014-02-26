@@ -30,7 +30,7 @@
     <div class="container">
 		<header id="globalHeader">
 			<h1 id="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<nav class="menu" role="navigation">
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => 'false' ) ); ?>
+			<nav id="headerNavigation" role="navigation">
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'header_menu' ) ); // remember to assign a menu in the admin to remove the container div ?>
 			</nav>
 		</header>

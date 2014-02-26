@@ -2,10 +2,11 @@
 	padding: 1rem 0 0;
 	border-bottom: 2px solid $charcoal;
 
-	.menu {
+	#headerNavigation {
+		@include outer-container;
+		margin-top: 2rem;
 
 		ul {
-			@include outer-container;
 			list-style: none;
 
 			li {
