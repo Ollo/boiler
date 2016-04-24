@@ -1,9 +1,10 @@
 // styles
+@import "partials/reset";
 @import "partials/colors";
 @import "partials/typography";
 @import "partials/responsive";
 @import "partials/helpers";
-@import "partials/base";
+@import "partials/code";
 
 
 @import "components/header";
@@ -11,11 +12,45 @@
 @import "components/footer";
 
 
-// feel free to nuke this
+
+// example layout
+// these are simple example styles feel free to nuke this
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+  font-family: 'Open Sans', sans-serif;
+
+  &.admin-bar {
+    padding-top: 4.6rem; // this makes me sad
+  }
+}
+
 .wrapper {
-  margin-top: 2rem;
-  padding: 2rem;
-  max-width: 114rem;
-  margin: 2rem auto;
-  // border: 2px dashed lighten($charcoal, 60%);
+  // margin-top: 2rem;
+  display: flex;
+  flex-flow: row wrap;
+
+  .content, .sidebar, .header, .footer {
+    flex: 1 100%;
+  }
+
+  @include tablet {
+    max-width: 114rem;
+    margin: 0 auto;
+
+    .header {
+      flex: 1 100%;
+    }
+    .content {
+      flex: 2 75%;
+    }
+    .sidebar {
+      flex: 3 25%;
+    }
+    .footer {
+      flex: 4 100%;
+    }
+  }
+
 }

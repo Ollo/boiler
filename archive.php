@@ -13,7 +13,7 @@ get_header(); ?>
     <?php if ( have_posts() ) : ?>
 
       <header>
-        <h1>
+        <h2>
           <?php
             if ( is_category() ) :
               printf( __( 'Category Archives: %s', 'boiler' ), '<span>' . single_cat_title( '', false ) . '</span>' );
@@ -62,7 +62,7 @@ get_header(); ?>
 
             endif;
           ?>
-        </h1>
+        </h2>
         <?php
           if ( is_category() ) :
             // show an optional category description

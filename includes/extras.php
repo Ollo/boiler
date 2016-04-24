@@ -70,9 +70,9 @@ function boiler_wp_title( $title, $sep ) {
 add_filter( 'wp_title', 'boiler_wp_title', 10, 2 );
 
 /**
- * Custom excerpt link 
+ * Custom excerpt link
  * use print_excerpt(int)
- * uses content instead of excerpt field so be be preparred to filter html out 
+ * uses content instead of excerpt field so be be preparred to filter html out
  */
 
 function print_excerpt($length) {
