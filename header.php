@@ -31,6 +31,16 @@
       </h1>
 
       <nav role="navigation">
-        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'header_menu' ) ); // remember to assign a menu in the admin to remove the container div ?>
+        <?php
+          // remember to assign a menu in the admin to remove the container div
+
+          wp_nav_menu(
+            array(
+            'theme_location' => 'primary',
+            'container' => false,
+            'menu_class' => 'header-menu'
+            )
+          );
+        ?>
       </nav>
     </header>

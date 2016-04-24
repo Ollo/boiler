@@ -12,9 +12,8 @@
 @import "components/footer";
 
 
-
-// example layout
-// these are simple example styles feel free to nuke this
+// example layout styles
+// feel free to nuke this
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
@@ -27,30 +26,64 @@ body {
 }
 
 .wrapper {
-  // margin-top: 2rem;
   display: flex;
   flex-flow: row wrap;
 
   .content, .sidebar, .header, .footer {
     flex: 1 100%;
+    box-sizing: border-box;
+    border-top: 1px dashed #ccc;
+    padding: 2rem;
+  }
+
+  .header-menu {
+    li {
+      border-top: 1px dashed #ccc;
+      padding: 1rem;
+    }
   }
 
   @include tablet {
     max-width: 114rem;
     margin: 0 auto;
+    border-left: 1px dashed #ccc;
+    border-right: 1px dashed #ccc;
+
+    .content, .sidebar, .header, .footer {
+      border-top: none;
+    }
 
     .header {
       flex: 1 100%;
+      border-bottom: 1px dashed #ccc;
+      border-top: 1px dashed #ccc;
     }
+
+    .header-menu {
+      display: flex;
+
+      li {
+        margin-right: 2rem;
+        padding: 1rem 2rem;
+        border: 1px dashed #ccc;
+      }
+    }
+
     .content {
       flex: 2 75%;
     }
+
     .sidebar {
       flex: 3 25%;
+      border-left: 1px dashed #ccc;
     }
+
     .footer {
       flex: 4 100%;
+      border-top: 1px dashed #ccc;
+      border-bottom: 1px dashed #ccc;
     }
   }
 
 }
+
