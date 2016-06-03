@@ -6,9 +6,10 @@
  */
 ?>
 
-			<footer id="globalFooter" class="site_footer">
-				<p class="copy">&copy; <?php echo date('Y'); ?> <?php bloginfo('site_title'); ?></p>
-			</footer>
+    <footer class="footer">
+      <p class="copy">&copy; <?php echo date('Y'); ?> <?php bloginfo('site_title'); ?></p>
+    </footer>
+  </div> <?php // .wrapper ?>
 
 <?php wp_footer(); ?>
 

@@ -6,7 +6,9 @@
 
 <article>
 	<header>
-		<h1><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+		<h2>
+			<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
+		</h2>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 			<div class="entry-meta">
@@ -16,9 +18,9 @@
 	</header>
 
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
-		
+
 			<?php the_excerpt(); ?>
-		
+
 	<?php else : ?>
 	<div>
 		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'boiler' ) ); ?>

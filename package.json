@@ -1,17 +1,17 @@
 {
   "name": "boiler",
-  "description": "a node / grunt powered boiler for WordPress",
-  "version": "1.0.0",
+  "description": "a minimal boiler for WordPress",
+  "author": "Joshua Ray <joshua@ollomedia.com>",
+  "version": "v2.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/Ollo/boiler"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-compass": "~0.5.0",
-    "grunt-contrib-watch": "~0.5.1",
-    "grunt-sass": "~0.11.0",
-    "grunt-contrib-sass": "~0.7.2",
-    "grunt-php": "~0.3.2"
+    "gulp": "^3.9.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-watch": "^4.3.5"
   }
 }

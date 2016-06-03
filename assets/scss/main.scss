@@ -1,0 +1,89 @@
+// styles
+@import "partials/reset";
+@import "partials/colors";
+@import "partials/typography";
+@import "partials/responsive";
+@import "partials/helpers";
+@import "partials/code";
+
+
+@import "components/header";
+@import "components/sidebar";
+@import "components/footer";
+
+
+// example layout styles
+// feel free to nuke this
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+  font-family: 'Open Sans', sans-serif;
+
+  &.admin-bar {
+    padding-top: 4.6rem; // this makes me sad
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+
+  .content, .sidebar, .header, .footer {
+    flex: 1 100%;
+    box-sizing: border-box;
+    border-top: 1px dashed #ccc;
+    padding: 2rem;
+  }
+
+  .header-menu {
+    li {
+      border-top: 1px dashed #ccc;
+      padding: 1rem;
+    }
+  }
+
+  @include tablet {
+    max-width: 114rem;
+    margin: 0 auto;
+    border-left: 1px dashed #ccc;
+    border-right: 1px dashed #ccc;
+
+    .content, .sidebar, .header, .footer {
+      border-top: none;
+    }
+
+    .header {
+      flex: 1 100%;
+      border-bottom: 1px dashed #ccc;
+      border-top: 1px dashed #ccc;
+    }
+
+    .header-menu {
+      display: flex;
+
+      li {
+        margin-right: 2rem;
+        padding: 1rem 2rem;
+        border: 1px dashed #ccc;
+      }
+    }
+
+    .content {
+      flex: 2 75%;
+    }
+
+    .sidebar {
+      flex: 3 25%;
+      border-left: 1px dashed #ccc;
+    }
+
+    .footer {
+      flex: 4 100%;
+      border-top: 1px dashed #ccc;
+      border-bottom: 1px dashed #ccc;
+    }
+  }
+
+}
+

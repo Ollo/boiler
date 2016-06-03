@@ -6,7 +6,7 @@
 
 <article>
 	<header>
-		<h1><?php the_title(); ?></h1>
+		<h2><?php the_title(); ?></h2>
 
 		<div class="entry-meta">
 			<?php boiler_posted_on(); ?>

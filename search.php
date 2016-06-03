@@ -7,30 +7,33 @@
 
 get_header(); ?>
 
-	<section>
+<section class="content" role="main">
 
-		<?php if ( have_posts() ) : ?>
+  <?php if ( have_posts() ) : ?>
 
-			<header>
-				<h1><?php printf( __( 'Search Results for: %s', 'boiler' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header>
+    <header>
+      <h2>
+      <?php printf( __( 'Search Results for: %s', 'boiler' ), '<span>' . get_search_query() . '</span>' ); ?>
+      </h2>
+    </header>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+    <?php /* Start the Loop */ ?>
+    <?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'content', 'search' ); ?>
+      <?php get_template_part( 'content', 'search' ); ?>
 
-			<?php endwhile; ?>
+    <?php endwhile; ?>
 
-			<?php boiler_content_nav( 'nav-below' ); ?>
+    <?php boiler_content_nav( 'nav-below' ); ?>
 
-		<?php else : ?>
+  <?php else : ?>
 
-			<?php get_template_part( 'no-results', 'search' ); ?>
+    <?php get_template_part( 'no-results', 'search' ); ?>
 
-		<?php endif; ?>
-		
-	</section>
+  <?php endif; ?>
+
+
+</section>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
